@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bold"
+        android:icon="@drawable/outline_format_bold_24"
+        app:showAsAction="always"
+        android:title="TODO">
+    </item>
+    <item
+        android:id="@+id/italic"
+        android:icon="@drawable/outline_format_italic_24"
+        app:showAsAction="always"
+        android:title="TODO">
+    </item>
+    <item
+        android:id="@+id/underline"
+        android:icon="@drawable/outline_format_underlined_24"
+        app:showAsAction="always"
+        android:title="TODO">
+    </item>
+
+</menu>
