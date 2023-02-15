@@ -1,16 +1,16 @@
 [
     {
-        "noteId": "noteId",
+        "noteId": 1,
         "title": "Coding",
         "content": "Coding is the process of creating and writing instructions for computers to execute. It involves using a programming language, such as Python or Java." 
     },
     {
-        "noteId": "noteId",
+        "noteId": 2,
         "title": "Sorting",
         "content": "Sorting algorithms are used to arrange a collection of items in a particular order, such as ascending or descending. There are many different sorting algorithms, each with its own set of strengths and weaknesses." 
     },
     {
-        "noteId": "noteId",
+        "noteId": 3,
         "title": "Recursion",
         "content" :"Recursion is a programming technique in which a function calls itself repeatedly until a certain condition is met." 
     }

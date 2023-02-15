@@ -1,20 +1,13 @@
-package com.example.practiceapplication3
+package com.example.practiceapplication3.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
-import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
-import com.example.practiceapplication3.data.NoteDao
-import com.example.practiceapplication3.data.model.Note
-import com.example.practiceapplication3.data.NotesDatabase
-import com.example.practiceapplication3.data.repository.DataRepository
-import com.example.practiceapplication3.data.repository.DataRepositorySource
-import com.example.practiceapplication3.ui.NotesViewModel
+import com.example.practiceapplication3.ID
+import com.example.practiceapplication3.R
 import com.google.android.material.elevation.SurfaceColors
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -51,6 +44,10 @@ class NoteEditActivity : AppCompatActivity() {
         mViewModel.content.observe(this, Observer<String>{title ->
             contentEditTextView.setText(title)
         })
+
+        titleEditTextView.requestFocus()
+
+
 
 
         //intent?.let{

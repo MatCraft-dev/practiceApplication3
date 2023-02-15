@@ -33,4 +33,13 @@
         android:title="TODO">
 
     </item>
+
+    <item
+        android:id="@+id/add_button"
+        android:icon="@drawable/outline_add_circle_24"
+        app:showAsAction="always"
+        android:title="TODO">
+
+    </item>
+
 </menu>

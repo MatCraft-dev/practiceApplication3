@@ -2,23 +2,34 @@ package com.example.practiceapplication3.data.repository
 
 import com.example.practiceapplication3.data.NoteDao
 import com.example.practiceapplication3.data.model.Note
+import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class NotesRepository(
+class DataRepository @Inject constructor(
     private val noteDao: NoteDao
-) {
+) : DataRepositorySource {
 
-    suspend fun insertNote(note: Note) {
+    override fun getNote(id: Int): Note {
+        return noteDao.getNote(id) }
+
+
+    override fun getNotes(): Flow<List<Note>> {
+        return noteDao.getNotes() }
+
+
+    override suspend fun insertNote(note: Note){
         noteDao.insertNote(note) }
 
 
-    fun updateNote(title: String, content:String, id:Int?){
+    override fun updateNote(title: String, content:String, id:Int?){
         noteDao.updateNote(title, content, id) }
 
 
-    suspend fun deleteNote(note: Note) {
+    override suspend fun deleteNote(note: Note) {
         noteDao.deleteNote(note) }
+
 
 
     //companion object {

@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.Log
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
-import com.example.practiceapplication3.data.Note
+import com.example.practiceapplication3.data.model.Note
 import com.example.practiceapplication3.data.NotesDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -27,7 +27,7 @@ class DatabaseWorker(
                         val notesList: List<Note> = Gson().fromJson(jsonReader, note)
 
                         val database = NotesDatabase.getInstance(applicationContext)
-                        database?.notesDao()?.insertAll(notesList)
+                        database.notesDao().insertAll(notesList)
 
                         Result.success()
                     }
